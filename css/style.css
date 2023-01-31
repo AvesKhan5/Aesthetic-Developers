@@ -248,18 +248,10 @@ footer{
     text-align: center;
 }
 
-/* img{
-    width: 100%;
+.btn:hover{
+    background-color: rgb(255, 255, 255);
+    color: brown;
+    border: 2px solid white;
     border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-    transition-property: transform;
-    
-<<<<<<< HEAD
-} */
-=======
-} */
->>>>>>> 31618af0932f339e36814a6ec5e2ff8f097e628a
+    cursor: pointer;
+}
