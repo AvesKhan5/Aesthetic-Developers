@@ -1,261 +1,89 @@
-/* CSS RESET */
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
-    background-color: rgb(158, 121, 121);
-}
-html{
-    scroll-behavior: smooth;
-}
-
-/* CSS VARIABLES */
-:root{
-    --navbar-height: 60px;
-}
-
-/* NAVIGATION BAR */
+/* NAVIGATION */
 #navbar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 10px;
-}
-
-#navbar::before{
-    content: "";
-    background-color: rgb(145, 67, 67);
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.7;
-}
-
-/* NAVIGATION BAR: logo & image */
-#logo{
-    margin: 10px 30px;
-    height: 50px;
-    width: 50px;
-}
-
-#logo img{
-    height: 70px;
-    width: 160px;
-    margin: -10px -25px;
-}
-
-/* NAVIGATION BAR: list styling */
-
-#navbar ul{
-    display: flex;
-    margin-left: 60px;
-    font-family: 'Fredoka One', cursive;
-}
-
-#navbar ul li{
-    list-style: none;
-    font-size: 1.3rem;
-}
-
-#navbar ul li a{
-    display: block;
-    padding: 5px 20px;
-    border-radius: 15px;
-    text-decoration: none;
-    color: black;
-}
-
-#navbar ul li a:hover{
-    color: white;
-    background-color: black;
-}
-
-/* Home Section */
-#home{
-    display: flex;
     flex-direction: column;
-    height: 508px;
-    padding: 5px 200px;
-    justify-content: center;
     align-items: center;
-}
-
-#home h1{
-    color: black;
     text-align: center;
 }
-
-#home p{
-    color: black;
+#navbar ul li a{
+    font-size: 1rem;
+    padding: 5px;
+    
+}
+#navbar ul {
+    font-size: 1rem;
+    padding: 5px;
+    margin: 10px 10px;
     text-align: center;
-    font-weight: bolder;
-    font-size: 1.5rem;
-    font-family: 'Courier New', Courier, monospace;
+}
+#logo img {
+    
+    margin: -10px -38px;
 }
 
+/* HOME SECTION */
+#home{
+    height: 370px;
+    padding: 3px 45px;
+}
 #home::before{
-    content: "";
-    background: url('../img/home\ background\ \(2\).jpg') no-repeat center center/cover;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 80%;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.5;
+    height: 480px;
+}
+#home h1{
+    font-size: 1.8rem;
+    padding: 30px;
+    /* width: 300px; */
+}
+#home p{
+    font-size: 0.8rem;
+    height: 200px;
+    padding: 50px;
+    /* width: 300px; */
 }
 
-/* SERVICES SECTION */
+/* SERVICE SECTION */
 #services{
-    margin: 30px;
-    display: flex;
+    flex-direction: column;
 }
 #services .box{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
     border: 2px solid black;
     border-radius: 25px;
-    padding: 20px;
-    margin: -10px auto;
+    padding: 15px;
+    margin: 4px 6px;
     background-color: rgb(226, 241, 226);
-    width: 90%;
 }
-#services .box img{
-    border: 2px solid black;
-    border-radius: 8px;
-    height: 309px;
-    width: 473px;
-    display: block;
-    margin: auto;
-    margin: 10px 10px;
-    /* padding: 10px; */
-    transition: 100ms;
-  box-shadow: 0px 0px 0px rgba(0,0,0,0);
+#services .box img {
+    height: 117px;
+    width: 150px;
 }
 
-#services .box img:hover{
-    cursor: pointer;
-    
-    transform: translate3d(0px,-15px,-15px);  
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.8);
+.service-container h2{
+    font-size: 1rem;
 }
 
-#services .box p{
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-}
 
-/* Clients Section */
-#client-section{
-    position: relative;
-height: 344px;
-}
-
-#client-section::before{
-    content: "";
-    position: absolute;
-    background: url('../img/food\ background.jpg') no-repeat center center/cover;
-    width: 100%;
-    height: 85%;
-    z-index: -1;
-    opacity: 0.5;
-    }
+/* CLIENT SECTION  */
 #clients{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
 }
-.client-items{
-    padding: 25px;
-}
+
 #clients img{
-    height: 150px;
+width: 70px;
+height: auto;
+padding: 2pxp 8px;
 }
 
-/* CONTACT SECTION */
-#contact{
-    position: relative;
-}
-#contact::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.5;
-    background: url('../img/form\ background.jpg') no-repeat center center/cover;
-}
-#contact-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 30px;
-}
-
+/* CONTACT US */
 #contact-box form{
-    width: 40%;
-   text-align: center;
-}
-#contact-box label{
-    font-size: 1.3rem;
-    font-family: 'Fredoka One', cursive;
+    width: 70%;
 }
 
-#contact-box input, #contact-box textarea{
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 9px;
-    font-size: 1.1rem;
-}
+/* FOOTER */
 
-footer{
-    background: black;
-    color: white;
-    padding: 10px 20px;
-
-}
-/* UTILITI CLASSES */
+/* UTILITY CLASSES */
 .h-primary{
-    font-family: 'Fredoka One', cursive;
-    font-size: 3rem;
-    padding: 10px;
+    font-size: 1.2rem;
 }
-.h-secondary{
-    font-family: 'Fredoka One', cursive;
-    font-size: 1.8rem;
-    padding: 10px;
-}    
-
 .btn{
-    background-color: brown;
-    color: white;
-    border: 2px solid white;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    font-family: 'Fredoka One', cursive;
-    margin: 17px;
-    padding: 2px;
-    cursor: pointer;
+    font-size: 10px;
+    padding: 4px 8px;
 }
-
-.center{
-    text-align: center;
-}
-
-/* img{
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-    transition-property: transform;
-    
-} */
